@@ -1,0 +1,137 @@
+@import "common";
+
+.cate_main {
+
+  .main_nav {
+    height: 70rem/@base;
+    line-height: 70rem/@base;
+    width: 100%;
+    background-color: #666;
+    padding-left: 20rem/@base;
+
+    a {
+      color: #fff;
+      font-size: 22rem/@base;
+    }
+  }
+
+  .main_pro {
+    margin: 0 auto;
+    width: 750rem/@base;
+    background-color: #fff;
+    position: relative;
+    p {
+      font-size: 20px;
+      text-align: center;
+      padding: 30rem/@base 0;
+    }
+    img {
+
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+
+  .main_tap {
+    width: 100%;
+     a {
+       display: block;
+       float: left;
+       width: 33.3%;
+       height: 68rem/@base;
+       background-color: #ffcd43;
+       border: 1px solid #c3580f;
+       text-align: center;
+       line-height: 68rem/@base;
+
+     }
+  }
+
+  .main_jd {
+    height: 90rem/@base;
+    padding: 0 20rem/@base;
+    a {
+      display: block;
+      float: left;
+      height: 90rem/@base ;
+      line-height: 90rem/@base ;
+
+      img {
+        display: inline-block;
+        width: 20rem/@base;
+        vertical-align: middle;
+      }
+      &:first-child {
+        width: 15%;
+      }
+      &:nth-child(n+2){
+        width: 35%;
+      }
+      &:nth-child(3){
+        color: #ff5300;
+      }
+      &:last-child {
+        width: 15%;
+      }
+      button {
+        height: 35rem/@base;
+        background-color: #ff5300;
+        border-radius:10rem/@base;
+        line-height: 35rem/@base;
+        padding: 0 15rem/@base;
+        color: #fff;
+
+      }
+
+    }
+  }
+
+  .main_comment {
+
+    h3 {
+      height: 66rem/@base;
+      width: 100%;
+      border-top: 5rem/@base solid #616161;
+      background-color: #dbdbdb;
+      line-height: 66rem/@base;
+      text-align: center;
+      font-size: 20px;
+      font-weight: 700;
+    }
+    ul {
+      li {
+        padding: 20rem/@base;
+        border-bottom: 1px solid #ccc;
+        p {
+          padding:30rem/@base 0;
+          font-size: 20rem/@base;
+          color: #000;
+          line-height: 35rem/@base;
+        }
+      }
+    }
+    .info {
+      width: 100%;
+
+       span {
+         width: 50%;
+         height: 30rem/2@base;
+         line-height: 30rem/2@base;
+         &:nth-child(n+2){
+           text-align: right;
+         }
+       }
+    }
+
+  }
+  .main_more {
+    margin-top: 30rem/@base;
+    width: 100%;
+    height: 70rem/@base;
+    background-color: #dbdbdb;
+    border-radius: 10rem/@base;
+    text-align: center;
+    line-height: 70rem/@base;
+    font-size: 20rem/@base;
+  }
+}

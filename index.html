@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <!--不需要引入meta:vp-->
+  <script src='lib/lib-flexible/flexible.js'></script>
+  <title>首页</title>
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class="mm_container">
+  <div class="mm_header clearfix">
+    <div class="header_left fl"></div>
+    <div class="header_right fr"></div>
+  </div>
+  <div class="mm_search">
+    <input type="text" placeholder='请输入你想比价的商品'>
+    <button>搜索</button>
+  </div>
+  <div class="mm_nav">
+    <a href="#">
+      <img src="images/ic_bcj.png" alt="">
+      <p>比价搜索</p>
+    </a>
+  </div>
+  <!--推荐-->
+  <div class="mm_recommend">
+    <div class="recommend_title clearfix">
+      <p class='fl tit_left'>超折扣推荐</p>
+      <a href='#' class='fr tit_right'><img src="images/more.png" alt=""></a>
+    </div>
+    <div class="recommend_product">
+      <ul>
+      <!--产品坑-->
+      </ul>
+    </div>
+  </div>
+  
+  <!--更多-->
+  <div class="mm_more">
+    <a href="#">更多优惠信息>></a>
+  </div>
+  
+  <!--排行-->
+  <div class="mm_sort clearfix">
+    <p class='fl sort_left'>品牌排行</p>
+    <a class='fr sort_right'><img src="images/more.png" alt=""></a>
+  </div>
+  
+  <!--底部-->
+  <div class="mm_footer">
+    <div class="footer_top">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="javascript:;" class='go_top'>
+        <img src="images/top.jpg"  alt="">
+        回到顶部
+      </a>
+    </div>
+    <div class="footer_bottom">
+      <p>
+        <a href="#" style='color:red;'>手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        <a href="#">--掌上比价平台</a>
+      </p>
+      <p><a href="#">手机APP下载</a></p>
+    </div>
+  
+  </div>
+
+</div>
+
+<script type='text/html' id='navTpl'>
+  {{each result v i}}
+  <a href="{{v.titlehref}}" data-id='{{v.indexmenuId}}' class='{{v.indexmenuId===7?"more":" "}}'>
+    {{#v.img}}
+    <p>{{v.name}}</p>
+  </a>
+  {{/each}}
+</script>
+
+<!--商品-->
+<script type='text/html' id='proTpl'>
+  {{each result v i}}
+  <li>
+    <a href="moneyproduct.html?productid={{v.productId}}">
+     <div>{{#v.productImg2}}</div>
+      <div class="product_right">
+        <p class='pro'>
+                <span class='pro_title'>
+                  {{v.productName}}
+                </span>
+          <span class='pro_price'>{{v.productPinkage}}</span>
+        </p>
+        <p class='pro_jd clearfix'>
+          <div class='fl'>{{v.productFrom}} </div>
+          <div class='fr'><i class='icon_comment'></i>{{v.productComCount}}</div>
+        </p>
+      </div>
+    </a>
+  </li>
+  {{/each}}
+</script>
+
+<script src='lib/jquery-1.12.4.min.js'></script>
+<script src='lib/artTemplate/template-web.js'></script>
+<script src='js/getApi.js'></script>
+<script src='js/common.js'></script>
+<script src='js/index.js'></script>
+</body>
+</html>

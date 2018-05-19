@@ -1,0 +1,157 @@
+@import "var";
+@import "common";
+
+.mm_container {
+  background-color: #fff;
+}
+
+.mm_header {
+
+   img {
+     padding-top: 35rem/@base;
+     padding-left: 30rem/@base;
+   }
+
+
+  .header_title {
+    text-align: center;
+    overflow: hidden;
+    height: 98rem/@base;
+    line-height: 98rem/@base;
+    font-size: 26rem/@base;
+    color: #fff;
+  }
+}
+
+//主体pro_main
+.pro_main {
+  padding: 20rem/@base;
+  .main_title {
+    .top_tit {
+      color: #000;
+      font-size:22rem/@base;
+    }
+    .tit_price {
+      color: @bgColor;
+      height: 30rem/@base;
+      line-height: 30rem/@base;
+    }
+    .tit_jd {
+      height: 50rem/@base;
+      line-height: 50rem/@base;
+      p {
+        color: #ccc;
+      }
+      a {
+        margin-left: 10rem/@base ;
+        color: #5797c4;
+      }
+    }
+
+  }
+  .main_content {
+    overflow: hidden;
+    padding-bottom: 30rem/@base;
+
+    .smImg {
+      img {
+        width: 200rem/@base;
+        float: right;
+      }
+
+    }
+    .bigImg {
+      img {
+        margin: 0 auto;
+        width: 300rem/@base;
+      }
+    }
+  }
+
+  .main_goshop {
+    margin: 0 auto;
+    width: 80%;
+    height: 65rem/@base;
+    background-color: @bgColor;
+    text-align: center;
+    line-height: 65rem/@base;
+    font-size: 22rem/@base;
+    color: #fff;
+    border-radius: 10rem/@base;
+  }
+
+  .tit {
+    height: 50rem/@base;
+    line-height: 50rem/@base;
+    font-size: 20rem/@base;
+    font-weight: 700;
+    color: #000;
+  }
+  .reply {
+    position: relative;
+    width: 100%;
+    textarea {
+      width: 100%;
+      height: 300rem/@base;
+      border: 1px solid #ccc;
+      border-radius: 10rem/@base;
+      vertical-align: bottom;
+    }
+    input {
+      height: 75rem/@base;
+      line-height: 75rem/@base ;
+      width: 200rem/@base;
+      background-color: @bgColor;
+      border-radius:10rem/@base;
+      vertical-align: bottom;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      color: #fff;
+    }
+  }
+  .list {
+    li {
+      padding: 20rem/@base;
+      .userimg {
+        float: left;
+        img {
+          width: 80rem/@base;
+          height: 80rem/@base;
+          border-radius:50%;
+          margin-top: 10rem/@base;
+        }
+      }
+
+      .con {
+        overflow: hidden;
+        padding-left: 50rem/@base;
+        font-size:20rem/@base;
+        .name {
+          padding: 20rem/@base 0;
+        }
+        .username {
+          float: left;
+        }
+        .time {
+          float: right;
+        }
+
+      }
+    }
+
+  }
+
+  .main_nav {
+    height: 70rem/@base;
+    line-height: 70rem/@base;
+    width: 100%;
+    background-color: #666;
+    padding-left: 20rem/@base;
+
+    a {
+      color: #fff;
+      font-size: 22rem/@base;
+    }
+  }
+}

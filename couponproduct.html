@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <!--不需要引入meta:vp-->
+  <script src='lib/lib-flexible/flexible.js'></script>
+  <title>优惠劵</title>
+  <link rel="stylesheet" href="css/couponproduct.css">
+</head>
+<body>
+<div class="mm_container">
+  <div class="mm_header clearfix">
+    <div class="fl">
+      <a href="javascript:history.go(-1);">
+        <img src="images/icback.svg" alt="">
+      </a>
+    </div>
+    <div class="header_right fr">
+    </div>
+    <div class='header_title'></div>
+  </div>
+  
+  <div class='mm_main'>
+    <h3>--点餐前出示手机中的优惠券，即可享受优惠--</h3>
+    <ul>
+      <!--kkkkkkk-->
+    </ul>
+  </div>
+  
+  
+  <!--底部-->
+  <div class="mm_footer">
+    <div class="footer_top">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="javascript:;" class='go_top'>
+        <img src="images/top.jpg" alt="">
+        回到顶部
+      </a>
+    </div>
+    <div class="footer_bottom">
+      <p>
+        <a href="#" style='color:red;'>手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        <a href="#">--掌上比价平台</a>
+      </p>
+      <p><a href="#">手机APP下载</a></p>
+    </div>
+  
+  </div>
+
+
+</div>
+
+<script type='text/html' id='listTpl'>
+  {{each result v i}}
+  <li data-id='{{v.couponProductId}}'>
+    <div class="main_pic">
+      {{# v.couponProductImg}}
+    </div>
+    <div class="main_info">
+      <p class='tit'>{{v.couponProductName}}</p>
+      <p class='pirce'>{{v.couponProductPrice}}</p>
+      <p class='time'>{{v.couponProductTime}}</p>
+    </div>
+  </li>
+  {{/each}}
+</script>
+
+<script src='lib/jquery-1.12.4.min.js'></script>
+<script src='lib/artTemplate/template-web.js'></script>
+<script src='lib/iscroll.js'></script>
+<script src='js/common.js'></script>
+<script src='js/getApi.js'></script>
+<script src='js/couponproduct.js'></script>
+</body>
+</html>

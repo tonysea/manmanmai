@@ -1,0 +1,53 @@
+@import "common";
+
+.mm_header {
+  img {
+    padding-top: 35rem/@base;
+    padding-left: 30rem/@base;
+  }
+  .header_title {
+    text-align: center;
+    overflow: hidden;
+    height: 98rem/@base;
+    line-height: 98rem/@base;
+    font-size: 26rem/@base;
+    color: #fff;
+  }
+}
+
+.main_pro {
+  width: 100%;
+  li {
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    height: 530rem/@base;
+    width: 50%;
+    position: relative;
+    padding: 20rem/@base;
+
+    &:nth-child(2n){
+      border-right:none;
+    }
+
+    img{
+      width: 60% ;
+      margin: 0 auto;
+    }
+
+    .info {
+      position: absolute;
+      bottom: 0;
+    }
+
+    p {
+      font-size:16px;
+      padding: 20rem/@base 0;
+    }
+    a {
+      color: #ff5300;
+    }
+    div {
+      padding: 10rem/@base 0;
+    }
+  }
+}

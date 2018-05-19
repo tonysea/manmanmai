@@ -1,0 +1,111 @@
+@import "base";
+@import "var";
+//大盒子
+.mm_container {
+  width: 100%;
+  max-width: 750px;
+  min-width: 320px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding-top: 98rem/@base ;
+  padding-bottom: 275rem/@base;
+  position: relative;
+  overflow: hidden;
+}
+//头部
+.mm_header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 98rem/@base;
+  background-color: @bgColor;
+
+  .header_left {
+    width: 371rem/@base;
+    height: 50rem/@base;
+    background: url('../images/header_logo.png') 0 0 no-repeat;
+    background-size: 371rem/@base 50rem/@base;
+    margin: 24rem/@base;
+    a {
+      background-color: red;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .header_right {
+    width: 68rem/@base;
+    height: 68rem/@base;
+    background: url('../images/header_app.png') 0 0 no-repeat;
+    background-size: 68rem/@base 68rem/@base;
+    margin: 15rem/@base;
+  }
+}
+
+.mm_search {
+  width: 100%;
+  position: relative;
+  padding: 10rem/@base;
+  padding-right: 150rem/@base;
+
+  input {
+    height: 60rem/@base;
+    width: 100%;
+    border-radius: 30px;
+    text-indent: 50rem/@base;
+    background-color: @mmColor;
+  }
+  button {
+    position: absolute;
+    right: 10rem/@base;
+    top: 10rem/@base;
+    height: 60rem/@base;
+    width: 125rem/@base;
+    border-radius: 30px;
+    background-color: @bgColor;
+    color: #fff;
+  }
+}
+
+
+/*底部*/
+.mm_footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 242rem/@base;
+  background-color: @mmColor;
+  .footer_top {
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    height: 68rem/@base;
+
+    a {
+      height: 68rem/@base;
+      display: block;
+      width: 33.33%;
+      float: left;
+      text-align: center;
+      line-height: 68rem/@base;
+      border-right: 1px solid #666;
+      img {
+        width: 20rem/@base;
+        height: 20rem/@base;
+        display: inline-block;
+        width: 30rem/@base;
+        vertical-align: middle;
+        margin-right: 5rem/@base;
+      }
+    }
+
+  }
+  .footer_bottom {
+    margin-top: 30rem/@base;
+    p {
+      text-align: center;
+    }
+  }
+
+}

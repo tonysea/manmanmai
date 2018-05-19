@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <!--不需要引入meta:vp-->
+  <script src='lib/lib-flexible/flexible.js'></script>
+  <title>省钱控 - 最新优惠</title>
+  <link rel="stylesheet" href="css/moneyctrl.css">
+</head>
+<body>
+<div class="mm_container">
+  <!--头部-->
+  <div class="mm_header clearfix">
+    <div class="fl">
+      <a href="javascript:history.go(-1);">
+        <img src="images/icback.svg" alt="">
+      </a>
+    </div>
+    <div class="header_right fr">
+    </div>
+    <div class='header_title'>省钱控 - 最新优惠</div>
+  </div>
+
+  <!--main-->
+  <div class="money_main">
+    <div class="main_pro">
+      <ul>
+       <!--kkkkkkk-->
+      </ul>
+    </div>
+    <!--main_btn-->
+    <div class="main_btn">
+      <button class="pre">上一页</button>
+      <select>
+        <!--btn坑-->
+      </select>
+      <button class='next'>下一页</button>
+    </div>
+</div>
+ 
+  
+  <!--底部-->
+  <div class="mm_footer">
+    <div class="footer_top">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="javascript:;" class='go_top'>
+        <img src="images/top.jpg" alt="">
+        回到顶部
+      </a>
+    </div>
+    <div class="footer_bottom">
+      <p>
+        <a href="#" style='color:red;'>手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        <a href="#">--掌上比价平台</a>
+      </p>
+      <p><a href="#">手机APP下载</a></p>
+    </div>
+  
+  </div>
+
+</div>
+<!--商品渲染-->
+<script type='text/html' id='proTpl'>
+  {{each result v i}}
+  <li>
+    <a href="moneyproduct.html?productid={{v.productId}}">
+      <div>{{#v.productImg2}}</div>
+      <div class="product_right">
+        <p class='pro'>
+                <span class='pro_title'>
+                  {{v.productName}}
+                </span>
+          <span class='pro_price'>{{v.productPinkage}}</span>
+        </p>
+        <p class='pro_jd clearfix'>
+        <div class='fl'>{{v.productFrom}} </div>
+        <div class='fr'><i class='icon_comment'></i>{{v.productComCount}}</div>
+        </p>
+      </div>
+    </a>
+  </li>
+  {{/each}}
+</script>
+
+
+<script src='lib/jquery-1.12.4.min.js'></script>
+<script src='lib/artTemplate/template-web.js'></script>
+<script src='js/common.js'></script>
+<script src='js/getApi.js'></script>
+<script src='js/moneyctrl.js'></script>
+</body>
+</html>

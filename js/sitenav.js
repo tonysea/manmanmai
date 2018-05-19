@@ -1,0 +1,9 @@
+$(function(){
+  $.ajax({
+    url:getApi.getsitenav,
+    success:function(info){
+      console.log(info);
+      $('.mm_main').html(template('shopTpl',info))
+    }
+  })
+})

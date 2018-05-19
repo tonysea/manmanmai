@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <!--不需要引入meta:vp-->
+  <script src='lib/lib-flexible/flexible.js'></script>
+  <title>凑单品</title>
+  <link rel="stylesheet" href="css/gsproduct.css">
+</head>
+<body>
+<div class="mm_container">
+  <div class="mm_header clearfix">
+    <div class="fl">
+      <a href="javascript:history.go(-1);">
+        <img src="images/icback.svg" alt="">
+      </a>
+    </div>
+    <div class="header_right fr">
+    </div>
+    <div class='header_title'>凑单品</div>
+  </div>
+  
+  <div class='mm_main'>
+    <!--水平区域滑动-->
+    <div class='main_list'>
+      <img src="images/search-icon.png" alt="">
+      <ul>
+        <li class='jd'><span>京东</span>
+          <p></p></li>
+        <li class='huabei'><span>华北</span>
+          <p></p></li>
+        <li class='all'><span>全部价格</span>
+          <p></p></li>
+      </ul>
+    </div>
+    <div class='fadeDown'>
+      <ul class='downJd'>
+        <!--<li></li>-->
+      </ul>
+      <ul class='downHuabei'>
+        <!--<li></li>-->
+      </ul>
+      <ul class='downAll'>
+        <li>全部价格<img src="images/on.png" alt=""></li>
+      
+      </ul>
+    </div>
+    
+    <!--商品内容-->
+    <div class="main_pro">
+      <ul class='clearfix'>
+        <li>
+          <img src="" alt="">
+          <p class='tit'>ddddddddd</p>
+          <p>&yen;<span class='pirce'>10</span>
+            <button>去凑单</button>
+          </p>
+        </li>
+      </ul>
+    </div>
+  
+  </div>
+  
+  
+  <!--底部-->
+  <div class="mm_footer">
+    <div class="footer_top">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="javascript:;" class='go_top'>
+        <img src="images/top.jpg" alt="">
+        回到顶部
+      </a>
+    </div>
+    <div class="footer_bottom">
+      <p>
+        <a href="#" style='color:red;'>手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        <a href="#">--掌上比价平台</a>
+      </p>
+      <p><a href="#">手机APP下载</a></p>
+    </div>
+  
+  </div>
+</div>
+
+<!--京东-->
+<script type='text/html' id='jdTpl'>
+  {{each result v i}}
+  <li data-shopId='{{v.shopId}}'>
+    {{v.shopName}}
+    <img src="images/on.png" alt="">
+  </li>
+  {{/each}}
+</script>
+
+<!--华北-->
+<script type='text/html' id='hbTpl'>
+  {{each result v i}}
+  <li data-areaId="{{v.areaId}}" data-name='{{v.areaName}}'>
+    {{v.areaName}}
+    <img src="images/on.png" alt="">
+  </li>
+  {{/each}}
+</script>
+
+<!--产品列表-->
+<script type='text/html' id='listTpl'>
+  {{each result v i}}
+  <li data-id='{{v.productId}}'>
+    <img src=" {{v.productImg}}" alt="">
+    <p class='tit one-txt-cut'>{{v.productName}}</p>
+    <p class='clearfix'>
+      <span class='pirce fl'>{{v.productPrice}}</span>
+      <button class='fr'>去凑单</button>
+    </p>
+  </li>
+  {{/each}}
+</script>
+
+<script src='lib/jquery-1.12.4.min.js'></script>
+<script src='lib/artTemplate/template-web.js'></script>
+<script src='lib/iscroll.js'></script>
+<script src='js/common.js'></script>
+<script src='js/getApi.js'></script>
+<script src='js/gsproduct.js'></script>
+</body>
+</html>

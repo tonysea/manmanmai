@@ -1,0 +1,138 @@
+@import "common";
+
+.mm_header {
+  background-color: #f4483e;
+  img {
+    padding-top: 35rem/@base;
+    padding-left: 30rem/@base;
+  }
+
+  .header_title {
+    text-align: center;
+    overflow: hidden;
+    height: 98rem/@base;
+    line-height: 98rem/@base;
+    font-size: 26rem/@base;
+    color: #fff;
+  }
+}
+
+.mm_main {
+  .main_list {
+    overflow: hidden;
+    ul {
+      overflow: hidden;
+      height: 80rem/@base;
+      overflow: hidden;
+      border-bottom: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      li {
+        float: left;
+        width: 33.333%;
+        height: 100%;
+        text-align: center;
+        line-height: 80rem/@base;
+        font-size: 16px;
+
+        p {
+          display: inline-block;
+          border: 10rem/@base solid #000;
+          border-left: 10rem/@base solid transparent;
+          border-right: 10rem/@base solid transparent;
+          position: relative;
+          top: 0;
+          left: 5rem/@base;
+          border-top: none;
+
+          &.rotate {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+    img {
+      float: right;
+      background-color: #fff;
+      width: 80rem/@base;
+      height: 80rem/@base;
+    }
+
+  }
+
+  .fadeDown {
+    li {
+      width: 100%;
+      height: 80rem/@base;
+      border-bottom: 1px solid #ccc;
+      line-height: 80rem/@base;
+      padding-left: 30rem/@base;
+      position: relative;
+      img {
+        width: 80rem/@base;
+        height: 80rem/@base;
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: none;
+      }
+    }
+    .downJd {
+      display: none;
+    }
+    .downHuabei {
+      display: none;
+    }
+    .downAll {
+      display: none;
+      img {
+        display: block;
+      }
+    }
+  }
+  
+  .main_pro {
+    width: 100%;
+    padding: 20rem/@base;
+    background-color: #f1f1f1;
+    li {
+      width: 49%;
+      height: 460rem/@base;
+      float: left;
+      margin-bottom: 15rem/@base;
+      background-color: #fff;
+      padding: 10rem/@base;
+
+      &:nth-child(odd){
+        margin-right: 2%;
+      }
+
+      img {
+        height: 350rem/@base;
+        width: 80%;
+        margin:0 auto;
+      }
+
+      .tit {
+        padding: 10rem/@base;
+      }
+
+      .pirce {
+        font-size: 14px;
+        color: red;
+        display: block;
+        height: 50rem/@base;
+        line-height: 50rem/@base;
+
+      }
+
+      button {
+        width: 120rem/@base;
+        height: 50rem/@base;
+        background-color: red;
+        border-radius:10rem/@base;
+        color: #fff;
+      }
+
+    }
+  }
+}

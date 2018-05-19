@@ -1,0 +1,162 @@
+@import "var";
+@import 'common';
+
+
+//导航
+.mm_nav {
+  border-top: 20rem/@base solid @mmColor;
+  border-bottom: 10rem/@base solid @mmColor;
+  background-color: #fff;
+  background-color: @mmColor;
+  overflow: hidden;
+  a {
+    padding-top: 20rem/@base;
+    display: block;
+    width: 25%;
+    float: left;
+    height: 187rem/@base;
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 100rem/@base;
+      height: 100rem/@base;
+    }
+    p {
+      //height: 30rem/@base;
+      //line-height: 30rem/@base;
+      text-align: center;
+      font-size: 24rem/@base;
+      color: #000;
+    }
+    &:nth-last-child(-n+4) {
+       display: none;
+     }
+    &.hide {
+      display: none;
+    }
+    &.show {
+      display: block;
+    }
+
+  }
+
+}
+
+//推荐
+.mm_recommend {
+
+  .recommend_title {
+    height: 70rem/@base;
+    background-color: @bgColor;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    .tit_left {
+      font-size: 22rem/@base;
+      color: #fff;
+      height: 70rem/@base;
+      line-height: 70rem/@base;
+    }
+    .tit_right {
+      display: block;
+      margin-top: 15rem/@base;
+
+      img {
+        width: 40rem/@base;
+        height: 40rem/@base;
+        vertical-align: middle;
+
+      }
+    }
+
+  }
+
+  .recommend_product {
+
+    a {
+      display: block;
+      padding: 20rem/@base;
+      border-bottom: 1px solid @mmColor;
+      padding-left: 210rem/@base;
+      position: relative;
+      height: 255rem/@base;
+      img {
+        width: 190rem/@base;
+        position: absolute;
+        left: 20rem/@base;
+      }
+      .product_right {
+        padding-left: 50rem/@base;
+        .pro {
+          height: 130rem/@base;
+
+          .pro_title {
+            font-size: 26rem/@base;
+            color: #000;
+
+          }
+          .pro_price {
+            color: @bgColor;
+            font-size: 20rem/@base;
+          }
+        }
+
+          .icon_comment {
+            display:inline-block;
+            width: 26rem/@base;
+            height: 26rem/@base;
+            background:  url('../images/comment.svg') 0 0 no-repeat;
+            vertical-align: middle;
+          }
+    
+
+      }
+
+    }
+
+  }
+}
+
+//更多
+.mm_more {
+  padding: 20rem/@base;
+  a {
+    display: block;
+    height: 58rem/@base;
+    line-height: 58rem/@base;
+    border: 1px solid #666;
+    text-align: center;
+    border-radius: 5rem/@base;
+    background-color: @mmColor;
+    font-size: 20rem/@base;
+    color: #000;
+  }
+
+}
+
+.mm_sort {
+  height: 70rem/@base;
+  background-color: @bgColor;
+  padding-left: 10px;
+  padding-right: 10px;
+  .sort_left {
+    font-size: 22rem/@base;
+    color: #fff;
+    height: 70rem/@base;
+    line-height: 70rem/@base;
+  }
+  .sort_right {
+    display: block;
+    margin-top: 15rem/@base;
+
+    img {
+      width: 40rem/@base;
+      height: 40rem/@base;
+      vertical-align: middle;
+    }
+  }
+}
+
+
+
+

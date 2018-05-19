@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <!--不需要引入meta:vp-->
+  <script src='lib/lib-flexible/flexible.js'></script>
+  <title>比价搜索</title>
+  <link rel="stylesheet" href="css/productlist.css">
+</head>
+<body>
+<div class="mm_container">
+  <div class="mm_header clearfix">
+    <div class="header_left fl">
+      <a href="index.html"></a>
+    </div>
+    <div class="header_right fr"></div>
+  </div>
+  <div class="mm_search">
+    <input type="text" placeholder='请输入你想比价的商品'>
+    <button>搜索</button>
+  </div>
+  
+  
+  <!--cate_main-->
+  <div class="cate_main">
+    <!--导航-->
+    <div class="main_nav">
+      <!--坑-->
+    </div>
+    <!--商品列表-->
+    <ul class='main_product'>
+     <!--坑-->
+    </ul>
+    
+    <!--main_btn-->
+    <div class="main_btn">
+      <button class="pre">上一页</button>
+      <select>
+    <!--btn坑-->
+      </select>
+      <button class='next'>下一页</button>
+    </div>
+  </div>
+  
+  
+  <!--底部-->
+  <div class="mm_footer">
+    <div class="footer_top">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="javascript:;" class='go_top'>
+        <img src="images/top.jpg" alt="">
+        回到顶部
+      </a>
+    </div>
+    <div class="footer_bottom">
+      <p>
+        <a href="#" style='color:red;'>手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        <a href="#">--掌上比价平台</a>
+      </p>
+      <p><a href="#">手机APP下载</a></p>
+    </div>
+  </div>
+</div>
+
+<!--标题渲染-->
+<script type='text/html' id='titTpl'>
+  {{each result v i}}
+  <a href="index.html">首页 > </a>
+  <a href="#">超值推荐 > </a>
+  <a href="#">移动端 : {{v.category}}</a>
+  {{/each}}
+</script>
+
+<!--列表渲染-->
+<script type='text/html' id='listTpl'>
+  {{each result v i}}
+  <li>
+    <a href="product.html?categoryId={{v.categoryId}}&productId={{v.productId}}&productName={{v.productName}}">
+      <div>{{#v.productImg}}</div>
+      <div class="product_right">
+        <p class='pro'>
+            <span class='pro_title'>
+              {{v.productName}}
+            </span>
+        </p>
+        <p class='pro_price'>{{v.productPrice}}</p>
+        <p class='pro_jd clearfix'>
+        <div class='fl'>{{v.productQuote}}</div>
+        <div class='fr'><i class='icon_comment'></i>{{v.productCom}}</div>
+        </p>
+      </div>
+    </a>
+  </li>
+  {{/each}}
+</script>
+
+<!--分页渲染-->
+<script type='text/html' id='catePagTpl'>
+
+  <% for( i = 1; i <= pages; i++){ %>
+  <option value='{{i}}' >{{i}}/{{pages}}</option>
+  <% } %>
+
+</script>
+
+<script src='lib/jquery-1.12.4.min.js'></script>
+<script src='lib/artTemplate/template-web.js'></script>
+<script src='js/common.js'></script>
+<script src='js/getApi.js'></script>
+<script src='js/productlist.js'></script>
+</body>
+</html>
