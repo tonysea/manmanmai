@@ -1,17 +1,6 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
 }
-/*div {*/
-/*width: 1rem;*/
-/*height: 0.4rem;*/
-/*font-size: 12px; // 默认写上dpr为1的fontSize*/
-/*}*/
-/*[data-dpr="2"] div {*/
-/*font-size: 24px;*/
-/*}*/
-/*[data-dpr="3"] div {*/
-/*font-size: 36px;*/
-/*}*/
 @charset "utf-8";
 /* 初始化 */
 body,
@@ -152,9 +141,6 @@ body {
 }
 .mm_container {
   width: 100%;
-  max-width: 750px;
-  min-width: 320px;
-  margin: 0 auto;
   background-color: #fff;
   padding-top: 1.30666667rem;
   padding-bottom: 3.66666667rem;
@@ -177,7 +163,6 @@ body {
   margin: 0.32rem;
 }
 .mm_header .header_left a {
-  background-color: red;
   display: block;
   width: 100%;
   height: 100%;
@@ -198,7 +183,7 @@ body {
 .mm_search input {
   height: 0.8rem;
   width: 100%;
-  border-radius: 30px;
+  border-radius: 0.4rem;
   text-indent: 0.66666667rem;
   background-color: #f1f1f1;
 }
@@ -211,6 +196,13 @@ body {
   border-radius: 30px;
   background-color: #ff841d;
   color: #fff;
+  font-size: 14px;
+}
+[data-dpr="2"] .mm_search button {
+  font-size: 28px;
+}
+[data-dpr="3"] .mm_search button {
+  font-size: 42px;
 }
 /*底部*/
 .mm_footer {
@@ -258,7 +250,6 @@ body {
 }
 .cate_main .main_nav a {
   color: #fff;
-  font-size: 0.29333333rem;
 }
 .cate_main .main_product a {
   display: block;
@@ -269,6 +260,7 @@ body {
 }
 .cate_main .main_product a img {
   width: 2.53333333rem;
+  height: 2.53333333rem;
   position: absolute;
   left: 0.26666667rem;
 }
@@ -279,7 +271,6 @@ body {
   height: 1.73333333rem;
 }
 .cate_main .main_product a .product_right .pro .pro_title {
-  font-size: 0.26666667rem;
   color: #000;
 }
 .cate_main .main_product a .product_right .pro_price {
@@ -292,6 +283,8 @@ body {
   height: 0.34666667rem;
   background: url('../images/comment.svg') 0 0 no-repeat;
   vertical-align: middle;
+  background-size: auto 100% ;
+  margin-right: 0.13333333rem;
 }
 .cate_main .main_btn {
   text-align: center;
@@ -309,4 +302,8 @@ body {
   border: 1px solid #ccc;
   margin-left: 5%;
   margin-right: 5%;
+  text-align: center;
+}
+.cate_main .main_btn select option {
+  text-align: center;
 }

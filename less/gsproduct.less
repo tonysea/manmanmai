@@ -1,10 +1,13 @@
 @import "common";
 
 .mm_header {
-  background-color: #f4483e;
-  img {
-    padding-top: 35rem/@base;
-    padding-left: 30rem/@base;
+  a {
+    display: block;
+    padding: 30rem/@base;
+    img {
+      width: 30rem/@base;
+
+    }
   }
 
   .header_title {
@@ -12,7 +15,7 @@
     overflow: hidden;
     height: 98rem/@base;
     line-height: 98rem/@base;
-    font-size: 26rem/@base;
+    .font_dpr(16px);
     color: #fff;
   }
 }
@@ -32,7 +35,6 @@
         height: 100%;
         text-align: center;
         line-height: 80rem/@base;
-        font-size: 16px;
 
         p {
           display: inline-block;
@@ -43,9 +45,9 @@
           top: 0;
           left: 5rem/@base;
           border-top: none;
-
+        //transition: all 1s;
           &.rotate {
-            transform: rotate(180deg);
+            //transform: rotate(180deg);
           }
         }
       }
@@ -67,23 +69,39 @@
       line-height: 80rem/@base;
       padding-left: 30rem/@base;
       position: relative;
+
       img {
-        width: 80rem/@base;
-        height: 80rem/@base;
+        width: 50rem/@base;
+        height: 50rem/@base;
         position: absolute;
-        right: 0;
-        top: 0;
+        right: 30rem/@base;
+        top: 15rem/@base;
         display: none;
       }
     }
     .downJd {
+      width: 100%;
       display: none;
+      position: absolute;
+      background-color: #fff;
+      li:first-child img{
+        display: block;
+      }
     }
     .downHuabei {
+      width: 100%;
       display: none;
+      position: absolute;
+      background-color: #fff;
+      li:first-child img{
+          display: block;
+      }
     }
     .downAll {
+      width: 100%;
       display: none;
+      position: absolute;
+      background-color: #fff;
       img {
         display: block;
       }

@@ -1,17 +1,6 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
 }
-/*div {*/
-/*width: 1rem;*/
-/*height: 0.4rem;*/
-/*font-size: 12px; // 默认写上dpr为1的fontSize*/
-/*}*/
-/*[data-dpr="2"] div {*/
-/*font-size: 24px;*/
-/*}*/
-/*[data-dpr="3"] div {*/
-/*font-size: 36px;*/
-/*}*/
 @charset "utf-8";
 /* 初始化 */
 body,
@@ -152,9 +141,6 @@ body {
 }
 .mm_container {
   width: 100%;
-  max-width: 750px;
-  min-width: 320px;
-  margin: 0 auto;
   background-color: #fff;
   padding-top: 1.30666667rem;
   padding-bottom: 3.66666667rem;
@@ -177,7 +163,6 @@ body {
   margin: 0.32rem;
 }
 .mm_header .header_left a {
-  background-color: red;
   display: block;
   width: 100%;
   height: 100%;
@@ -198,7 +183,7 @@ body {
 .mm_search input {
   height: 0.8rem;
   width: 100%;
-  border-radius: 30px;
+  border-radius: 0.4rem;
   text-indent: 0.66666667rem;
   background-color: #f1f1f1;
 }
@@ -211,6 +196,13 @@ body {
   border-radius: 30px;
   background-color: #ff841d;
   color: #fff;
+  font-size: 14px;
+}
+[data-dpr="2"] .mm_search button {
+  font-size: 28px;
+}
+[data-dpr="3"] .mm_search button {
+  font-size: 42px;
 }
 /*底部*/
 .mm_footer {
@@ -252,24 +244,39 @@ body {
 .mm_container {
   background-color: #fff;
 }
-.mm_header img {
-  padding-top: 0.46666667rem;
-  padding-left: 0.4rem;
+.mm_header a {
+  display: block;
+  padding: 0.4rem;
+}
+.mm_header a img {
+  width: 0.4rem;
 }
 .mm_header .header_title {
   text-align: center;
   overflow: hidden;
   height: 1.30666667rem;
   line-height: 1.30666667rem;
-  font-size: 0.34666667rem;
+  font-size: 16px;
   color: #fff;
+}
+[data-dpr="2"] .mm_header .header_title {
+  font-size: 32px;
+}
+[data-dpr="3"] .mm_header .header_title {
+  font-size: 48px;
 }
 .pro_main {
   padding: 0.26666667rem;
 }
 .pro_main .main_title .top_tit {
   color: #000;
-  font-size: 0.29333333rem;
+  font-size: 16px;
+}
+[data-dpr="2"] .pro_main .main_title .top_tit {
+  font-size: 32px;
+}
+[data-dpr="3"] .pro_main .main_title .top_tit {
+  font-size: 48px;
 }
 .pro_main .main_title .tit_price {
   color: #ff841d;
@@ -290,12 +297,21 @@ body {
 .pro_main .main_content {
   overflow: hidden;
 }
+.pro_main .main_content .smImg {
+  font-size: 14px;
+}
+[data-dpr="2"] .pro_main .main_content .smImg {
+  font-size: 28px;
+}
+[data-dpr="3"] .pro_main .main_content .smImg {
+  font-size: 42px;
+}
 .pro_main .main_content .smImg img {
   width: 2.66666667rem;
   float: right;
 }
 .pro_main .main_content .bigImg img {
-  margin: 0 auto;
+  margin: 0.4rem auto;
   width: 6.66666667rem;
 }
 .pro_main .main_city {
@@ -319,7 +335,6 @@ body {
   display: block;
   padding-left: 0.26666667rem;
   padding-right: 0.26666667rem;
-  font-size: 0.29333333rem;
 }
 .pro_main .main_city li a span {
   float: left;
@@ -340,14 +355,12 @@ body {
   background-color: #ff841d;
   text-align: center;
   line-height: 0.86666667rem;
-  font-size: 0.29333333rem;
   color: #fff;
   border-radius: 0.13333333rem;
 }
 .pro_main .tit {
   height: 0.66666667rem;
   line-height: 0.66666667rem;
-  font-size: 0.26666667rem;
   font-weight: 700;
   color: #000;
 }
@@ -389,7 +402,6 @@ body {
 .pro_main .list li .con {
   overflow: hidden;
   padding-left: 0.66666667rem;
-  font-size: 0.26666667rem;
 }
 .pro_main .list li .con .name {
   padding: 0.26666667rem 0;
@@ -409,5 +421,4 @@ body {
 }
 .pro_main .main_nav a {
   color: #fff;
-  font-size: 0.29333333rem;
 }

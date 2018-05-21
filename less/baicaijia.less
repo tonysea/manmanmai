@@ -1,10 +1,13 @@
 @import "common";
 
 .mm_header {
-  background-color: #f4483e;
-  img {
-    padding-top: 35rem/@base;
-    padding-left: 30rem/@base;
+  a {
+    display: block;
+    padding: 30rem/@base;
+    img {
+      width: 30rem/@base;
+
+    }
   }
 
   .header_title {
@@ -12,7 +15,7 @@
     overflow: hidden;
     height: 98rem/@base;
     line-height: 98rem/@base;
-    font-size: 26rem/@base;
+    .font_dpr(16px);
     color: #fff;
   }
 }
@@ -33,7 +36,6 @@
       a {
         display: block;
         height: 100%;
-        font-size: 16px;
         line-height: 60rem/@base;
 
         &.active {
@@ -74,7 +76,7 @@
       padding-left: 20rem/@base;
       overflow: hidden;
       .pro_tit {
-        font-size: 16px;
+        .font_dpr(14px);
         color: #000;
         height: 45rem/@base;
         line-height:45rem/@base;
@@ -82,11 +84,11 @@
       .pro_price {
         color: #fc353a;
         line-height: 80rem/@base;
-        font-size: 18px;
+
         i,
         em,
         del{
-          font-size:14px;
+
           margin: 5rem/@base;
         }
         del {
@@ -113,7 +115,7 @@
           text-align:center;
           line-height: 30rem/@base;
           color: #fff;
-          font-size: 14px;
+
         }
         em {
           height: 100%;

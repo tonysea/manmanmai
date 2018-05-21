@@ -3,15 +3,13 @@
 //大盒子
 .mm_container {
   width: 100%;
-  max-width: 750px;
-  min-width: 320px;
-  margin: 0 auto;
   background-color: #fff;
-  padding-top: 98rem/@base ;
+  padding-top: 98rem/@base;
   padding-bottom: 275rem/@base;
   position: relative;
   overflow: hidden;
 }
+
 //头部
 .mm_header {
   position: absolute;
@@ -28,8 +26,8 @@
     background-size: 371rem/@base 50rem/@base;
     margin: 24rem/@base;
     a {
-      background-color: red;
       display: block;
+      width: 100%;
       width: 100%;
       height: 100%;
     }
@@ -43,6 +41,7 @@
   }
 }
 
+
 .mm_search {
   width: 100%;
   position: relative;
@@ -52,7 +51,7 @@
   input {
     height: 60rem/@base;
     width: 100%;
-    border-radius: 30px;
+    border-radius: 30rem/@base;
     text-indent: 50rem/@base;
     background-color: @mmColor;
   }
@@ -65,9 +64,9 @@
     border-radius: 30px;
     background-color: @bgColor;
     color: #fff;
+    .font_dpr(14px);
   }
 }
-
 
 /*底部*/
 .mm_footer {

@@ -4,29 +4,30 @@
   <meta charset="UTF-8">
   <!--不需要引入meta:vp-->
   <script src='lib/lib-flexible/flexible.js'></script>
-  <title>比价搜索</title>
-  <link rel="stylesheet" href="css/category.css">
+  <title>品牌大全</title>
+  <link rel="stylesheet" href="css/brandTitle.css">
 </head>
 <body>
 <div class="mm_container">
+  <!--头部-->
   <div class="mm_header clearfix">
-    <div class="header_left fl">
-      <a href="index.html"></a>
-    </div>
+    <div class="header_left fl"></div>
     <div class="header_right fr"></div>
   </div>
+  <!--搜素框-->
   <div class="mm_search">
     <input type="text" placeholder='请输入你想比价的商品'>
     <button>搜索</button>
   </div>
   
-  <!--cate_main-->
-  <div class="cate_main">
+  <div class="mm_main">
+    <div class="main_tit">
+      <h3>热门品牌排行</h3>
+    </div>
     <ul>
-      <!--好坑-->
+      <!--kkkkkk-->
     </ul>
   </div>
-  
   
   <!--底部-->
   <div class="mm_footer">
@@ -46,33 +47,27 @@
       </p>
       <p><a href="#">手机APP下载</a></p>
     </div>
+  
   </div>
+
 </div>
 
-<script type='text/html' id='cateTpl'>
+<script type='text/html' id='titTpl'>
   {{each result v i}}
-    <li data-id='{{v.titleId}}' class='clearfix'>
-      <span>{{v.title}}</span>
+  <li>
+    <a href="brand.html?brandtitleid={{v.brandTitleId}}&brandTitle={{v.brandTitle}}">
+      <span>{{v.brandTitle}}</span>
       <img src="images/arrow.png" alt="">
-      <div class='clearfix'>
-      
-      </div>
-    </li>
+    </a>
+  </li>
   {{/each}}
 </script>
 
-<script type='text/html' id='tableTpl'>
-  {{each result v i}}
-      
-        <a href="#" data-id='{{v.categoryId}}'>{{v.category}}</a>
-      
-  {{/each}}
-</script>
 
 <script src='lib/jquery-1.12.4.min.js'></script>
 <script src='lib/artTemplate/template-web.js'></script>
-<script src='js/common.js'></script>
 <script src='js/getApi.js'></script>
-<script src='js/category.js'></script>
+<script src='js/common.js'></script>
+<script src='js/brandTitle.js'></script>
 </body>
 </html>

@@ -1,17 +1,6 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
 }
-/*div {*/
-/*width: 1rem;*/
-/*height: 0.4rem;*/
-/*font-size: 12px; // 默认写上dpr为1的fontSize*/
-/*}*/
-/*[data-dpr="2"] div {*/
-/*font-size: 24px;*/
-/*}*/
-/*[data-dpr="3"] div {*/
-/*font-size: 36px;*/
-/*}*/
 @charset "utf-8";
 /* 初始化 */
 body,
@@ -152,9 +141,6 @@ body {
 }
 .mm_container {
   width: 100%;
-  max-width: 750px;
-  min-width: 320px;
-  margin: 0 auto;
   background-color: #fff;
   padding-top: 1.30666667rem;
   padding-bottom: 3.66666667rem;
@@ -177,7 +163,6 @@ body {
   margin: 0.32rem;
 }
 .mm_header .header_left a {
-  background-color: red;
   display: block;
   width: 100%;
   height: 100%;
@@ -198,7 +183,7 @@ body {
 .mm_search input {
   height: 0.8rem;
   width: 100%;
-  border-radius: 30px;
+  border-radius: 0.4rem;
   text-indent: 0.66666667rem;
   background-color: #f1f1f1;
 }
@@ -211,6 +196,13 @@ body {
   border-radius: 30px;
   background-color: #ff841d;
   color: #fff;
+  font-size: 14px;
+}
+[data-dpr="2"] .mm_search button {
+  font-size: 28px;
+}
+[data-dpr="3"] .mm_search button {
+  font-size: 42px;
 }
 /*底部*/
 .mm_footer {
@@ -270,9 +262,15 @@ body {
   height: 1.33333333rem;
 }
 .mm_nav a p {
+  font-size: 14px;
   text-align: center;
-  font-size: 0.32rem;
   color: #000;
+}
+[data-dpr="2"] .mm_nav a p {
+  font-size: 28px;
+}
+[data-dpr="3"] .mm_nav a p {
+  font-size: 42px;
 }
 .mm_nav a:nth-last-child(-n+4) {
   display: none;
@@ -290,10 +288,16 @@ body {
   padding-right: 10px;
 }
 .mm_recommend .recommend_title .tit_left {
-  font-size: 0.29333333rem;
+  font-size: 14px;
   color: #fff;
   height: 0.93333333rem;
   line-height: 0.93333333rem;
+}
+[data-dpr="2"] .mm_recommend .recommend_title .tit_left {
+  font-size: 28px;
+}
+[data-dpr="3"] .mm_recommend .recommend_title .tit_left {
+  font-size: 42px;
 }
 .mm_recommend .recommend_title .tit_right {
   display: block;
@@ -324,12 +328,17 @@ body {
   height: 1.73333333rem;
 }
 .mm_recommend .recommend_product a .product_right .pro .pro_title {
-  font-size: 0.34666667rem;
+  font-size: 14px;
   color: #000;
+}
+[data-dpr="2"] .mm_recommend .recommend_product a .product_right .pro .pro_title {
+  font-size: 28px;
+}
+[data-dpr="3"] .mm_recommend .recommend_product a .product_right .pro .pro_title {
+  font-size: 42px;
 }
 .mm_recommend .recommend_product a .product_right .pro .pro_price {
   color: #ff841d;
-  font-size: 0.26666667rem;
 }
 .mm_recommend .recommend_product a .product_right .icon_comment {
   display: inline-block;
@@ -349,7 +358,6 @@ body {
   text-align: center;
   border-radius: 0.06666667rem;
   background-color: #f1f1f1;
-  font-size: 0.26666667rem;
   color: #000;
 }
 .mm_sort {
@@ -359,10 +367,16 @@ body {
   padding-right: 10px;
 }
 .mm_sort .sort_left {
-  font-size: 0.29333333rem;
+  font-size: 16px;
   color: #fff;
   height: 0.93333333rem;
   line-height: 0.93333333rem;
+}
+[data-dpr="2"] .mm_sort .sort_left {
+  font-size: 32px;
+}
+[data-dpr="3"] .mm_sort .sort_left {
+  font-size: 48px;
 }
 .mm_sort .sort_right {
   display: block;

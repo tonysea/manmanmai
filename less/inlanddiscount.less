@@ -1,16 +1,21 @@
 @import "common";
 
 .mm_header {
-  img {
-    padding-top: 35rem/@base;
-    padding-left: 30rem/@base;
+  a {
+    display: block;
+    padding: 30rem/@base;
+    img {
+      width: 30rem/@base;
+
+    }
   }
+
   .header_title {
     text-align: center;
     overflow: hidden;
     height: 98rem/@base;
     line-height: 98rem/@base;
-    font-size: 26rem/@base;
+    .font_dpr(16px);
     color: #fff;
   }
 }
@@ -25,12 +30,12 @@
     position: relative;
     padding: 20rem/@base;
 
-    &:nth-child(2n){
-      border-right:none;
+    &:nth-child(2n) {
+      border-right: none;
     }
 
-    img{
-      width: 60% ;
+    img {
+      width: 60%;
       margin: 0 auto;
     }
 
@@ -40,7 +45,7 @@
     }
 
     p {
-      font-size:16px;
+      .font_dpr(14px);
       padding: 20rem/@base 0;
     }
     a {

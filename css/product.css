@@ -1,17 +1,6 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
 }
-/*div {*/
-/*width: 1rem;*/
-/*height: 0.4rem;*/
-/*font-size: 12px; // 默认写上dpr为1的fontSize*/
-/*}*/
-/*[data-dpr="2"] div {*/
-/*font-size: 24px;*/
-/*}*/
-/*[data-dpr="3"] div {*/
-/*font-size: 36px;*/
-/*}*/
 @charset "utf-8";
 /* 初始化 */
 body,
@@ -152,9 +141,6 @@ body {
 }
 .mm_container {
   width: 100%;
-  max-width: 750px;
-  min-width: 320px;
-  margin: 0 auto;
   background-color: #fff;
   padding-top: 1.30666667rem;
   padding-bottom: 3.66666667rem;
@@ -177,7 +163,6 @@ body {
   margin: 0.32rem;
 }
 .mm_header .header_left a {
-  background-color: red;
   display: block;
   width: 100%;
   height: 100%;
@@ -198,7 +183,7 @@ body {
 .mm_search input {
   height: 0.8rem;
   width: 100%;
-  border-radius: 30px;
+  border-radius: 0.4rem;
   text-indent: 0.66666667rem;
   background-color: #f1f1f1;
 }
@@ -211,6 +196,13 @@ body {
   border-radius: 30px;
   background-color: #ff841d;
   color: #fff;
+  font-size: 14px;
+}
+[data-dpr="2"] .mm_search button {
+  font-size: 28px;
+}
+[data-dpr="3"] .mm_search button {
+  font-size: 42px;
 }
 /*底部*/
 .mm_footer {
@@ -258,18 +250,22 @@ body {
 }
 .cate_main .main_nav a {
   color: #fff;
-  font-size: 0.29333333rem;
 }
 .cate_main .main_pro {
   margin: 0 auto;
-  width: 10rem;
   background-color: #fff;
   position: relative;
 }
 .cate_main .main_pro p {
-  font-size: 20px;
+  font-size: 14px;
   text-align: center;
   padding: 0.4rem 0;
+}
+[data-dpr="2"] .cate_main .main_pro p {
+  font-size: 28px;
+}
+[data-dpr="3"] .cate_main .main_pro p {
+  font-size: 42px;
 }
 .cate_main .main_pro img {
   width: 50%;
@@ -330,7 +326,6 @@ body {
   background-color: #dbdbdb;
   line-height: 0.88rem;
   text-align: center;
-  font-size: 20px;
   font-weight: 700;
 }
 .cate_main .main_comment ul li {

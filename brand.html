@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <!--不需要引入meta:vp-->
+  <script src='lib/lib-flexible/flexible.js'></script>
+  <title>品牌大全</title>
+  <link rel="stylesheet" href="css/brand.css">
+</head>
+<body>
+<div class="mm_container">
+  <!--头部-->
+  <div class="mm_header clearfix">
+    <div class="header_left fl">
+      <a href="index.html"></a>
+    </div>
+    <div class="header_right fr"></div>
+  </div>
+  <!--搜素框-->
+  <div class="mm_search">
+    <input type="text" placeholder='请输入你想比价的商品'>
+    <button>搜索</button>
+  </div>
+  
+  <div class="mm_main">
+    <div class="main_one">
+      <div class="main_tit">
+        <h3></h3>
+      </div>
+      <ul>
+        <!--kkkkkk-->
+      </ul>
+    </div>
+    
+    <div class="main_two">
+      <div class="main_tit">
+        <h3></h3>
+      </div>
+      <ul>
+        <!--kkkkkk-->
+      </ul>
+    </div>
+    
+    <div class="main_three">
+      <div class="main_tit">
+        <h3></h3>
+      </div>
+      <ul>
+        <!--kkkkkk-->
+        <li>
+          <div class="info">
+            <img src="images/product.jpg" alt="">
+            <p class='tit'>dasghsdbf</p>
+          </div>
+          <div class='comment'>
+            <p class="user clearfix">
+              <span class='name fl'>name</span>
+              <span class='time fr'>time</span>
+            </p>
+            <p class='content'>外观：精工细作，颜值再度提高作为一台55寸的
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  
+  </div>
+  
+  <!--底部-->
+  <div class="mm_footer">
+    <div class="footer_top">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="javascript:;" class='go_top'>
+        <img src="images/top.jpg" alt="">
+        回到顶部
+      </a>
+    </div>
+    <div class="footer_bottom">
+      <p>
+        <a href="#" style='color:red;'>手机APP下载</a>
+        <a href="#">慢慢买手机版</a>
+        <a href="#">--掌上比价平台</a>
+      </p>
+      <p><a href="#">手机APP下载</a></p>
+    </div>
+  
+  </div>
+
+</div>
+
+<script type='text/html' id='listTpl'>
+  {{each result v i}}
+  <li data-id='{{v.brandTitleId}}'>
+    <a href="productlist.html?categoryid={{v.categoryId}}">
+      <div class="num fl">{{i+1}}</div>
+      <img src="images/right.png" class='fr' alt="">
+      <div class="info">
+        <p>{{v.brandName}}</p>
+        <p>{{v.brandInfo}}</p>
+      </div>
+    </a>
+  </li>
+  {{/each}}
+</script>
+
+<script type='text/html' id='proTpl'>
+  {{each result v i}}
+  <a href="product.html?categoryId={{v.categoryId}}&productId={{v.productId}}&productName={{v.productName}}">
+    <li>
+      {{# v.productImg}}
+      <div class='info'>
+        <p class='tit'>{{v.productName}}</p>
+        <p class='price'>
+          <span>{{v.productPrice}}</span>
+          <img src="images/star.png" alt="">
+        </p>
+        <p class='txt'>
+          <span>{{v.productQuote}}</span>
+          <span>{{v.productCom}}</span>
+        </p>
+      </div>
+    </li>
+  </a>
+  {{/each}}
+</script>
+
+<script type='text/html' id='comTpl'>
+  {{each result v i}}
+  <li data-id='{{v.productId}}'>
+    <div class="info">
+      {{# v.productImg}}
+      <p class='tit'>{{v.productName}}</p>
+    </div>
+    <div class='comment'>
+      <p class="user clearfix">
+        <span class='name fl'>
+          {{v.comName}}
+          <img src="images/star.png" alt="">
+        </span>
+        <span class='time fr'>{{v.comTime}}</span>
+      </p>
+      <p class='content'>{{v.comContent}}</p>
+    </div>
+  </li>
+  {{/each}}
+</script>
+<!--二次渲染-->
+<script type='text/html' id='comconTpl'>
+  {{each result v i}}
+  <li data-id='{{v.productId}}'>
+    <div class="info">
+      {{# v.productImg}}
+      <p class='tit'>{{v.productName}}</p>
+    </div>
+    <div class='comment'>
+      <p class="user clearfix">
+        <span class='name fl'>
+          {{v.comName}}
+          <img src="images/star.png" alt="">
+        </span>
+        <span class='time fr'>{{v.comTime}}</span>
+      </p>
+      <p class='content'>{{v.comContent}}</p>
+    </div>
+  </li>
+  {{/each}}
+</script>
+
+
+<script src='lib/jquery-1.12.4.min.js'></script>
+<script src='lib/artTemplate/template-web.js'></script>
+<script src='js/getApi.js'></script>
+<script src='js/common.js'></script>
+<script src='js/brand.js'></script>
+</body>
+</html>

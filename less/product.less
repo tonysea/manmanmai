@@ -11,17 +11,16 @@
 
     a {
       color: #fff;
-      font-size: 22rem/@base;
+
     }
   }
 
   .main_pro {
     margin: 0 auto;
-    width: 750rem/@base;
     background-color: #fff;
     position: relative;
     p {
-      font-size: 20px;
+      .font_dpr(14px);
       text-align: center;
       padding: 30rem/@base 0;
     }
@@ -34,17 +33,17 @@
 
   .main_tap {
     width: 100%;
-     a {
-       display: block;
-       float: left;
-       width: 33.3%;
-       height: 68rem/@base;
-       background-color: #ffcd43;
-       border: 1px solid #c3580f;
-       text-align: center;
-       line-height: 68rem/@base;
+    a {
+      display: block;
+      float: left;
+      width: 33.3%;
+      height: 68rem/@base;
+      background-color: #ffcd43;
+      border: 1px solid #c3580f;
+      text-align: center;
+      line-height: 68rem/@base;
 
-     }
+    }
   }
 
   .main_jd {
@@ -53,8 +52,8 @@
     a {
       display: block;
       float: left;
-      height: 90rem/@base ;
-      line-height: 90rem/@base ;
+      height: 90rem/@base;
+      line-height: 90rem/@base;
 
       img {
         display: inline-block;
@@ -64,10 +63,10 @@
       &:first-child {
         width: 15%;
       }
-      &:nth-child(n+2){
+      &:nth-child(n+2) {
         width: 35%;
       }
-      &:nth-child(3){
+      &:nth-child(3) {
         color: #ff5300;
       }
       &:last-child {
@@ -76,7 +75,7 @@
       button {
         height: 35rem/@base;
         background-color: #ff5300;
-        border-radius:10rem/@base;
+        border-radius: 10rem/@base;
         line-height: 35rem/@base;
         padding: 0 15rem/@base;
         color: #fff;
@@ -95,7 +94,6 @@
       background-color: #dbdbdb;
       line-height: 66rem/@base;
       text-align: center;
-      font-size: 20px;
       font-weight: 700;
     }
     ul {
@@ -103,7 +101,7 @@
         padding: 20rem/@base;
         border-bottom: 1px solid #ccc;
         p {
-          padding:30rem/@base 0;
+          padding: 30rem/@base 0;
           font-size: 20rem/@base;
           color: #000;
           line-height: 35rem/@base;
@@ -113,14 +111,14 @@
     .info {
       width: 100%;
 
-       span {
-         width: 50%;
-         height: 30rem/2@base;
-         line-height: 30rem/2@base;
-         &:nth-child(n+2){
-           text-align: right;
-         }
-       }
+      span {
+        width: 50%;
+        height: 30rem/2@base;
+        line-height: 30rem/2@base;
+        &:nth-child(n+2) {
+          text-align: right;
+        }
+      }
     }
 
   }

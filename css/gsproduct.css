@@ -1,17 +1,6 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", STHeiti, "Microsoft Yahei", Tahoma, Simsun, sans-serif;
 }
-/*div {*/
-/*width: 1rem;*/
-/*height: 0.4rem;*/
-/*font-size: 12px; // 默认写上dpr为1的fontSize*/
-/*}*/
-/*[data-dpr="2"] div {*/
-/*font-size: 24px;*/
-/*}*/
-/*[data-dpr="3"] div {*/
-/*font-size: 36px;*/
-/*}*/
 @charset "utf-8";
 /* 初始化 */
 body,
@@ -152,9 +141,6 @@ body {
 }
 .mm_container {
   width: 100%;
-  max-width: 750px;
-  min-width: 320px;
-  margin: 0 auto;
   background-color: #fff;
   padding-top: 1.30666667rem;
   padding-bottom: 3.66666667rem;
@@ -177,7 +163,6 @@ body {
   margin: 0.32rem;
 }
 .mm_header .header_left a {
-  background-color: red;
   display: block;
   width: 100%;
   height: 100%;
@@ -198,7 +183,7 @@ body {
 .mm_search input {
   height: 0.8rem;
   width: 100%;
-  border-radius: 30px;
+  border-radius: 0.4rem;
   text-indent: 0.66666667rem;
   background-color: #f1f1f1;
 }
@@ -211,6 +196,13 @@ body {
   border-radius: 30px;
   background-color: #ff841d;
   color: #fff;
+  font-size: 14px;
+}
+[data-dpr="2"] .mm_search button {
+  font-size: 28px;
+}
+[data-dpr="3"] .mm_search button {
+  font-size: 42px;
 }
 /*底部*/
 .mm_footer {
@@ -249,20 +241,26 @@ body {
 .mm_footer .footer_bottom p {
   text-align: center;
 }
-.mm_header {
-  background-color: #f4483e;
+.mm_header a {
+  display: block;
+  padding: 0.4rem;
 }
-.mm_header img {
-  padding-top: 0.46666667rem;
-  padding-left: 0.4rem;
+.mm_header a img {
+  width: 0.4rem;
 }
 .mm_header .header_title {
   text-align: center;
   overflow: hidden;
   height: 1.30666667rem;
   line-height: 1.30666667rem;
-  font-size: 0.34666667rem;
+  font-size: 16px;
   color: #fff;
+}
+[data-dpr="2"] .mm_header .header_title {
+  font-size: 32px;
+}
+[data-dpr="3"] .mm_header .header_title {
+  font-size: 48px;
 }
 .mm_main .main_list {
   overflow: hidden;
@@ -279,7 +277,6 @@ body {
   height: 100%;
   text-align: center;
   line-height: 1.06666667rem;
-  font-size: 16px;
 }
 .mm_main .main_list ul li p {
   display: inline-block;
@@ -290,9 +287,6 @@ body {
   top: 0;
   left: 0.06666667rem;
   border-top: none;
-}
-.mm_main .main_list ul li p.rotate {
-  transform: rotate(180deg);
 }
 .mm_main .main_list img {
   float: right;
@@ -309,21 +303,36 @@ body {
   position: relative;
 }
 .mm_main .fadeDown li img {
-  width: 1.06666667rem;
-  height: 1.06666667rem;
+  width: 0.66666667rem;
+  height: 0.66666667rem;
   position: absolute;
-  right: 0;
-  top: 0;
+  right: 0.4rem;
+  top: 0.2rem;
   display: none;
 }
 .mm_main .fadeDown .downJd {
+  width: 100%;
   display: none;
+  position: absolute;
+  background-color: #fff;
+}
+.mm_main .fadeDown .downJd li:first-child img {
+  display: block;
 }
 .mm_main .fadeDown .downHuabei {
+  width: 100%;
   display: none;
+  position: absolute;
+  background-color: #fff;
+}
+.mm_main .fadeDown .downHuabei li:first-child img {
+  display: block;
 }
 .mm_main .fadeDown .downAll {
+  width: 100%;
   display: none;
+  position: absolute;
+  background-color: #fff;
 }
 .mm_main .fadeDown .downAll img {
   display: block;

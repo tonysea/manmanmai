@@ -6,16 +6,21 @@
 }
 
 .mm_header {
-  img {
-    padding-top: 35rem/@base;
-    padding-left: 30rem/@base;
+  a {
+    display: block;
+    padding: 30rem/@base;
+    img {
+      width: 30rem/@base;
+
+    }
   }
+
   .header_title {
     text-align: center;
     overflow: hidden;
     height: 98rem/@base;
     line-height: 98rem/@base;
-    font-size: 26rem/@base;
+    .font_dpr(16px);
     color: #fff;
   }
 }
@@ -26,7 +31,7 @@
   .main_title {
      .top_tit {
        color: #000;
-       font-size:22rem/@base;
+       .font_dpr(16px);
      }
     .tit_price {
       color: @bgColor;
@@ -49,6 +54,7 @@
   .main_content {
     overflow: hidden;
     .smImg {
+      .font_dpr(14px);
       img {
         width: 200rem/@base;
         float: right;
@@ -57,7 +63,7 @@
     }
     .bigImg {
       img {
-        margin: 0 auto;
+        margin: 30rem/@base auto;
         width: 500rem/@base;
       }
     }
@@ -84,7 +90,7 @@
         display: block;
         padding-left: 20rem/@base;
         padding-right: 20rem/@base;
-        font-size: 22rem/@base;
+
         
         span {
           float: left;
@@ -111,7 +117,6 @@
     background-color: @bgColor;
     text-align: center;
     line-height: 65rem/@base;
-    font-size: 22rem/@base;
     color: #fff;
     border-radius: 10rem/@base;
   }
@@ -119,7 +124,6 @@
   .tit {
     height: 50rem/@base;
     line-height: 50rem/@base;
-    font-size: 20rem/@base;
     font-weight: 700;
     color: #000;
   }
@@ -162,7 +166,6 @@
       .con {
         overflow: hidden;
         padding-left: 50rem/@base;
-        font-size:20rem/@base;
         .name {
           padding: 20rem/@base 0;
         }
@@ -187,7 +190,6 @@
 
     a {
       color: #fff;
-      font-size: 22rem/@base;
     }
   }
 }

@@ -42,11 +42,12 @@ $(function(){
   })
   
   //  导航
-  console.log(getObj('productName'));
+  // console.log(getObj('productName'));
   var tit=getObj('productName');
   titArr=tit.split(' ');
   console.log(titArr[0]);
   var title = titArr[0];
+  
   $.ajax({
     url:getApi.getcategorybyid,
     data:{

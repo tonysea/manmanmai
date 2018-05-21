@@ -1,10 +1,13 @@
 @import "common";
 
 .mm_header {
-  background-color: #f4483e;
-  img {
-    padding-top: 35rem/@base;
-    padding-left: 30rem/@base;
+  a {
+    display: block;
+    padding: 30rem/@base;
+    img {
+      width: 30rem/@base;
+
+    }
   }
 
   .header_title {
@@ -12,7 +15,7 @@
     overflow: hidden;
     height: 98rem/@base;
     line-height: 98rem/@base;
-    font-size: 26rem/@base;
+    .font_dpr(16px);
     color: #fff;
   }
 }
@@ -42,11 +45,8 @@
 
     .tit {
       line-height: 30rem/@base;
-      font-size: 14px;
     }
     .pirce {
-      padding: 20rem/@base 0;
-      font-size: 12px;
       font-weight: 700;
     }
     .time {

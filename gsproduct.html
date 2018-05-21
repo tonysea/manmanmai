@@ -49,13 +49,7 @@
     <!--商品内容-->
     <div class="main_pro">
       <ul class='clearfix'>
-        <li>
-          <img src="" alt="">
-          <p class='tit'>ddddddddd</p>
-          <p>&yen;<span class='pirce'>10</span>
-            <button>去凑单</button>
-          </p>
-        </li>
+     <!--kkkkkkkk-->
       </ul>
     </div>
   
@@ -108,12 +102,14 @@
 <script type='text/html' id='listTpl'>
   {{each result v i}}
   <li data-id='{{v.productId}}'>
-    <img src=" {{v.productImg}}" alt="">
-    <p class='tit one-txt-cut'>{{v.productName}}</p>
-    <p class='clearfix'>
-      <span class='pirce fl'>{{v.productPrice}}</span>
-      <button class='fr'>去凑单</button>
-    </p>
+    <a href="#">
+      <img src=" {{v.productImg}}" alt="">
+      <p class='tit one-txt-cut'>{{v.productName}}</p>
+      <p class='clearfix'>
+        <span class='pirce fl'>{{v.productPrice}}</span>
+        <button class='fr'>去凑单</button>
+      </p>
+    </a>
   </li>
   {{/each}}
 </script>

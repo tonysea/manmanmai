@@ -13,7 +13,7 @@ $(function () {
   
   //京东点击
   $('.jd').click(function () {
-    $(".downJd").toggle();
+    $(".downJd").slideToggle();
     $(this).find('p').toggleClass('rotate');
     $('.downHuabei').hide();
     $('.downAll').hide();
@@ -41,7 +41,7 @@ $(function () {
   })
 //  华北点击
   $('.huabei').click(function () {
-    $(".downHuabei").toggle();
+    $(".downHuabei").slideToggle();
     $(this).find('p').toggleClass('rotate');
     $('.downJd').hide();
     $('.downAll').hide();
@@ -64,7 +64,7 @@ $(function () {
   
   //全部点击
   $('.all').click(function () {
-    $(".downAll").toggle();
+    $(".downAll").slideToggle();
     $(this).find('p').toggleClass('rotate');
     $('.downJd').hide();
     $('.downHuabei').hide();
@@ -88,6 +88,10 @@ $(function () {
       }
     })
   }
+  $('.main_pro ul').on('click','li',function(){
+    location.href='gsproduct.html';
+  })
+  
   
  
 })

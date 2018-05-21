@@ -9,7 +9,7 @@
       display: block;
       width: 100%;
       height: 80rem/@base;
-      font-size: 20px;
+      .font_dpr(14px);
       font-weight: 700;
       line-height:  80rem/@base;
       padding-left: 30rem/@base;
@@ -17,9 +17,9 @@
     }
     img {
       position: absolute;
-      top: 15rem/@base;
+      top: 30rem/@base;
       right: 30rem/@base;
-      width:50rem/@base;
+      width:30rem/@base;
     }
     &:first-child{
       border-radius: 10rem/@base 10rem/@base 0 0;
@@ -33,19 +33,21 @@
       width: 100%;
       background-color: #fff;
       border: 1px solid #666;
+      border-bottom: none;
+      border-right: none;
       a {
         float: left;
-        width: 33.3%;
+        width: 33.3333%;
         height: 60rem/@base;
         border-right:  1px solid #666;
         border-bottom:  1px solid #666;
         text-align: center;
         line-height: 60rem/@base;
-        font-size: 16px;
+        .font_dpr(14px);
 
-        &:nth-child(3n){
-          border-right: none;
-        }
+        //&:nth-child(3n){
+        //  border-right: none;
+        //}
       }
       &.show {
         display: block;
